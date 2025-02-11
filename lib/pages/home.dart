@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:fitness_tuto/models/category_model.dart';
 import 'package:fitness_tuto/models/diet_model.dart';
 import 'package:fitness_tuto/models/popular_model.dart';
@@ -154,7 +156,7 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(
           height: 15,
         ),
-        Container(
+        SizedBox(
           height: 240,
           child: ListView.separated(
             itemBuilder: (context, index) {
@@ -177,11 +179,7 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 16),
                         ),
                         Text(
-                          diets[index].level +
-                              ' | ' +
-                              diets[index].duration +
-                              ' | ' +
-                              diets[index].calorie,
+                          '${diets[index].level} | ${diets[index].duration} | ${diets[index].calorie}',
                           style: const TextStyle(
                               color: Color(0xff7B6F72),
                               fontSize: 13,
@@ -192,6 +190,16 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       height: 45,
                       width: 130,
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(colors: [
+                            diets[index].viewIsSelected
+                                ? const Color(0xff9DCEFF)
+                                : Colors.transparent,
+                            diets[index].viewIsSelected
+                                ? const Color(0xff92A3FD)
+                                : Colors.transparent
+                          ]),
+                          borderRadius: BorderRadius.circular(50)),
                       child: Center(
                         child: Text(
                           'View',
@@ -203,16 +211,6 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 14),
                         ),
                       ),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(colors: [
-                            diets[index].viewIsSelected
-                                ? const Color(0xff9DCEFF)
-                                : Colors.transparent,
-                            diets[index].viewIsSelected
-                                ? const Color(0xff92A3FD)
-                                : Colors.transparent
-                          ]),
-                          borderRadius: BorderRadius.circular(50)),
                     )
                   ],
                 ),
@@ -245,7 +243,7 @@ class _HomePageState extends State<HomePage> {
         SizedBox(
           height: 15,
         ),
-        Container(
+        SizedBox(
           height: 120,
           child: ListView.separated(
               itemCount: categories.length,
@@ -310,7 +308,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(12.0),
               child: SvgPicture.asset('assets/icons/Search.svg'),
             ),
-            suffixIcon: Container(
+            suffixIcon: SizedBox(
               width: 100,
               child: IntrinsicHeight(
                 child: Row(
