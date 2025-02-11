@@ -11,7 +11,7 @@ Bienvenue dans **Fitness app** ! Une application Flutter moderne qui vous aide �
 
 ## 🎨 Aperçu de l'interface
 
-![Présentation de l'application](assets/thumbnail.png)
+<img src="assets/thumbnail.png" alt="Présentation de l'application" width="350"/>
 
 ## 🛠️ Technologies utilisées
 
