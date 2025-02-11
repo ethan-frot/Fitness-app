@@ -11,8 +11,7 @@ Bienvenue dans **Fitness app** ! Une application Flutter moderne qui vous aide �
 
 ## 🎨 Aperçu de l'interface
 
-📌 Une interface fluide et moderne avec une navigation intuitive.\
-📌 Des couleurs attrayantes et un design épuré pour une meilleure expérience utilisateur.
+![Présentation de l'application](assets/thumbnail.png)
 
 ## 🛠️ Technologies utilisées
 
