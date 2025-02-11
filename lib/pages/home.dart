@@ -1,8 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:fitness_tuto/models/category_model.dart';
-import 'package:fitness_tuto/models/diet_model.dart';
-import 'package:fitness_tuto/models/popular_model.dart';
+import 'package:fitness_app/models/category_model.dart';
+import 'package:fitness_app/models/diet_model.dart';
+import 'package:fitness_app/models/popular_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
